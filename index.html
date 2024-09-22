@@ -21,7 +21,7 @@
                 textColor1: '#111111',
                 textColor2: '#111111B3',
                 primaryColor: '#F9F7F3',
-                secondaryColor: '#1111110D',
+                secondaryColor: '#11111171',
                 btnFieldColor: '#B4F461',
               }
             }
@@ -30,8 +30,27 @@
       </script>
 </head>
 <body>
-    <header>
-
+    <header class="bg-primaryColor">
+        <nav class="w-11/12 mx-auto py-6 flex justify-between">
+            <!-- Blog Button -->
+            <div>
+                <button class="btn btn-success bg-btnFieldColor border-none hover:bg-[white] hover:border font-bold">Blog</button>
+            </div>
+            <!-- Blog Button End-->
+            <div class="flex gap-4 items-center">
+                <img src="assets/logo.png" alt="">
+                <h4 class="font-bold">Donate Bangladesh</h4>
+            </div>
+            <div class="flex gap-3 items-center">
+                <img src="assets/coin.png" alt="">
+                <h4 class="text-secondaryColor font-bold">
+                    <!-- Corrent Balance -->
+                    <span>5500</span>
+                    <span>BDT</span>
+                    <!-- Corrent Balance -->
+                </h4>
+            </div>
+        </nav>
     </header>
     <main>
 
