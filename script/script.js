@@ -1,0 +1,1 @@
+console.log('Mama Ami Script.js,amk ki dekha jacce.............?')
