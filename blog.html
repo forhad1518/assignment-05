@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assingment 05</title>
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind And DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Style -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                textColor1: '#111111',
+                textColor2: '#111111B3',
+                primaryColor: '#F9F7F3',
+                secondaryColor: '#11111171',
+                btnFieldColor: '#B4F461',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <header class="bg-primaryColor">
+        <nav class="w-11/12 mx-auto py-6 flex justify-between">
+            <!-- Blog Button -->
+            <div>
+                <button class="btn btn-success bg-btnFieldColor border-none hover:bg-[white] hover:border font-bold">Blog</button>
+            </div>
+            <!-- Blog Button End-->
+            <div class="flex gap-4 items-center">
+                <img src="assets/logo.png" alt="">
+                <h4 class="font-bold">Donate Bangladesh</h4>
+            </div>
+            <div class="flex gap-3 items-center">
+                <img src="assets/coin.png" alt="">
+                <h4 class="text-secondaryColor font-bold">
+                    <!-- Corrent Balance -->
+                    <span>5500</span>
+                    <span>BDT</span>
+                    <!-- Corrent Balance -->
+                </h4>
+            </div>
+        </nav>
+    </header>
+    <main class="mt-14">
+        <section class="w-11/12 mx-auto">
+            <h1 class="text-4xl font-extrabold mb-5">Important FAQ (?)</h1>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Mode (DOM)?</div>
+                <div class="collapse-content">
+                  <p class="text-textColor2">The Document Object Model (DOM) is a programming interface for representing HTML, XML, and other structured documents as a tree of nodes. Each node represents a part of the document, such as an element, attribute, text node, or comment. The DOM provides a way for developers to access and manipulate the structure, content, and style of a document.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p class="text-textColor2">
+                    <span class="text-lg font-bold">1. By ID:</span>
+                    <br>
+                    <Span>This method selects the element with the specified ID.</Span>
+                    <br>
+                    <span class="text-lg font-bold">2. By class name:</span>
+                    <br>
+                    <Span>This method returns a collection of all elements with the specified class name.</Span>
+                    <br>
+                    <span class="text-lg font-bold">3. By tag name:</span>
+                    <br>
+                    <Span>This method returns a collection of all elements with the specified tag name.</Span>
+                    <br>
+                    <span class="text-lg font-bold">4. By query selector:</span>
+                    <br>
+                    <Span>This method selects the first element that matches the specified CSS selector.</Span>
+                    <br>
+                    <span class="text-lg font-bold">5. By query selector all:</span>
+                    <br>
+                    <Span>This method returns a collection of all elements that match the specified CSS selector.</Span>
+                    <br>
+                  </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is  event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p class="text-textColor2">
+                    <span class="text-lg font-bold">Event Delegation in the DOM</span>
+                    <br>
+                    <Span>Event delegation is a technique in JavaScript where you attach an event listener to a parent element instead of directly to each child element. This allows you to handle events for multiple child elements efficiently, without having to add individual event listeners to each one.</Span>
+                    <br>
+                    <br>
+                    <span class="text-lg font-bold">Why is it useful?</span>
+                    <br>
+                    <Span>Improved performance:<br>
+                         When you attach event listeners to individual elements, the browser has to create and maintain a separate event listener object for each element. This can lead to performance issues, especially when dealing with a large number of elements. With event delegation, you only need to create one event listener for the parent element.
+                         <br>
+                         <br>
+                        Dynamic content: <br>
+                         Event delegation is particularly useful when dealing with dynamically generated content. You can attach an event listener to a parent element once, and it will automatically handle events for any child elements that are added later.
+                         <br>
+                         <br>
+                        Simplified code: <br>
+                         Event delegation can simplify your code by reducing the amount of repetitive code needed to handle events for multiple elements.</Span>
+                    <br>
+                  </p>
+                </div>
+              </div>
+        </section>
+    </main>
+    <footer class="bg-primaryColor h-24 mt-8">
+
+    </footer>
+    <script src="./script/utitlities.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+</html>
