@@ -1,1 +1,2 @@
-console.log('Mama Ami Script.js,amk ki dekha jacce.............?')
+// Call from home to blog
+changeHtml('blog-btn','blog.html')
