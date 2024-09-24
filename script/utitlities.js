@@ -1,8 +1,20 @@
 // the function locate html file.
-function changeHtml(id,fileName){
-    document.getElementById(id).addEventListener('click',function(){
-        window.location.href = fileName;
-    })
+document.getElementById('home-btn').addEventListener('click',function(){
+    window.location.href = 'index.html'
+})
+
+
+// the function get from input value
+function getValueInput(id){
+    const idValue = document.getElementById(id).value;
+    const numberValue = parseFloat(idValue);
+    return numberValue;
 }
-// Call from blog to home 
-changeHtml('home-btn','index.html')
+
+
+// the function get inner text
+function getInnerNumberValue(id){
+    const idInnerText = document.getElementById(id).innerText;
+    const numberInnerText = parseFloat(idInnerText);
+    return numberInnerText;
+}
