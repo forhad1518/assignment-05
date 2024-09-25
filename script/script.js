@@ -49,7 +49,7 @@ const showHistoryContainer = document.getElementById('history-container');
 
 
 
-// donate btn evenlister
+// donate btn evenlistern for Noakhali
 document.getElementById('donateBtnNoakhali').addEventListener('click',function(){
     // Global Element for balance 
         const mainBalance = getInnerNumberValue('total-balance');
@@ -62,7 +62,7 @@ document.getElementById('donateBtnNoakhali').addEventListener('click',function()
     }
     else{
         if(InputBalanceNoakhali > mainBalance){
-            alert("Unsufficent Balance")
+            alert("Unsufficient Balance")
             return
         }
         else{
@@ -70,7 +70,8 @@ document.getElementById('donateBtnNoakhali').addEventListener('click',function()
             const remainBalance = mainBalance - InputBalanceNoakhali;
             document.getElementById('donate-balance-noakhali').innerText = totalBalanceNoakhali;
             document.getElementById('total-balance').innerText = remainBalance;
-        
+
+            // Create Histore Element
             const createHistory = document.createElement('div')
             createHistory.className = "border w-11/12 mx-auto p-4 rounded-lg mb-4 flex flex-col gap-y-4"
             createHistory.innerHTML = `
@@ -80,4 +81,76 @@ document.getElementById('donateBtnNoakhali').addEventListener('click',function()
             showHistoryContainer.insertBefore(createHistory,showHistoryContainer.firstChild);
         }
     }
+})
+
+// Donate btn Evenlistener for feni
+document.getElementById('donate-btn-feni').addEventListener('click',function(){
+        // Global Element for balance 
+        const mainBalance = getInnerNumberValue('total-balance');
+        const InputBalanceFeni = getValueInput('input-Feild-Feni');
+        const donateBalanceFeni = getInnerNumberValue('donate-balance-feni');
+
+    if(isNaN(InputBalanceFeni) || InputBalanceFeni < 1 || InputBalanceFeni === ""){
+        alert("Invalid Input")
+        return
+    }
+    else{
+        if(InputBalanceFeni > mainBalance){
+            alert("Unsufficient Balance")
+            return
+        }
+        else{
+            const totalBalanceFeni = InputBalanceFeni + donateBalanceFeni;
+            const remainBalance = mainBalance - InputBalanceFeni;
+            document.getElementById('donate-balance-feni').innerText = totalBalanceFeni;
+            document.getElementById('total-balance').innerText = remainBalance;
+
+            // Create Histore Element
+            const createHistory = document.createElement('div')
+            createHistory.className = "border w-11/12 mx-auto p-4 rounded-lg mb-4 flex flex-col gap-y-4"
+            createHistory.innerHTML = `
+                <h3 class="text-xl font-bold">${InputBalanceFeni} Taka is Donate for Flood Relief in Feni,Bangladesh</h3>
+                <p>Date: ${fullDate} </p>
+            `
+            showHistoryContainer.insertBefore(createHistory,showHistoryContainer.firstChild);
+        }
+    }
+
+
+})
+
+// Donate btn Evenlistener for aid-injured-btn
+document.getElementById('aid-injured-btn').addEventListener('click',function(){
+        // Global Element for balance 
+        const mainBalance = getInnerNumberValue('total-balance');
+        const InputBalanceAidInjured = getValueInput('input-Feild-aidInjured');
+        const donateBalanceAidInjured = getInnerNumberValue('donate-balance-aidInjured');
+
+    if(isNaN(InputBalanceAidInjured) || InputBalanceAidInjured < 1 || InputBalanceAidInjured === ""){
+        alert("Invalid Input")
+        return
+    }
+    else{
+        if(InputBalanceAidInjured > mainBalance){
+            alert("Unsufficient Balance")
+            return
+        }
+        else{
+            const totalBalanceAidInjured = InputBalanceAidInjured + donateBalanceAidInjured;
+            const remainBalance = mainBalance - InputBalanceAidInjured;
+            document.getElementById('donate-balance-aidInjured').innerText = totalBalanceAidInjured;
+            document.getElementById('total-balance').innerText = remainBalance;
+
+            // Create Histore Element
+            const createHistory = document.createElement('div')
+            createHistory.className = "border w-11/12 mx-auto p-4 rounded-lg mb-4 flex flex-col gap-y-4"
+            createHistory.innerHTML = `
+                <h3 class="text-xl font-bold">${InputBalanceAidInjured} Taka is Aid for Injured in the Quota Movement</h3>
+                <p>Date: ${fullDate} </p>
+            `
+            showHistoryContainer.insertBefore(createHistory,showHistoryContainer.firstChild);
+        }
+    }
+
+
 })
