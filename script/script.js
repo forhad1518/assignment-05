@@ -79,6 +79,7 @@ document.getElementById('donateBtnNoakhali').addEventListener('click',function()
                 <p>Date: ${fullDate} </p>
             `
             showHistoryContainer.insertBefore(createHistory,showHistoryContainer.firstChild);
+            alert(InputBalanceNoakhali + "Taka Is Donated")
         }
     }
 })
@@ -113,6 +114,7 @@ document.getElementById('donate-btn-feni').addEventListener('click',function(){
                 <p>Date: ${fullDate} </p>
             `
             showHistoryContainer.insertBefore(createHistory,showHistoryContainer.firstChild);
+            alert(InputBalanceFeni + "Taka Is Donated")
         }
     }
 
@@ -149,6 +151,7 @@ document.getElementById('aid-injured-btn').addEventListener('click',function(){
                 <p>Date: ${fullDate} </p>
             `
             showHistoryContainer.insertBefore(createHistory,showHistoryContainer.firstChild);
+            alert(InputBalanceAidInjured + "Taka Is Donated")
         }
     }
 
